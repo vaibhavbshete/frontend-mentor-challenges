@@ -14,7 +14,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; position: fixed; bottom: 0; padding: 5px; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
     :root{
@@ -36,48 +36,62 @@
 
     }
 
+    .screen-centering{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .qr-image {
-      border-radius: 0.5rem;
+      border-radius: 10px;
       width: 100%;
     }
     .qr-box-wrap{
       background-color: var(--white);
-      border-radius: 16px;
-      padding: 16px;
+      border-radius: 20px;
+      padding: 18px;
       width: 100%;
-      max-width: 300px;
-      margin: 2rem auto;
+      max-width: 320px;
+      /* margin: 2rem auto; */
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     }
 
     .qr-text-wrap{
-      padding: 0 1.2rem;
+      padding: 0 24px;
+      margin: 20px 0;
     }
 
     .qr-title{
       color: var(--dark-blue);
+      font-size: 24px;
+      font-weight: 700;
       text-align: center;
-      margin: 0.5rem 0;
+      margin: 20px 0;
     }
     .qr-desc{
       color: var(--grayish-blue);
       text-align: center;
-      font-size: small;
-      margin: 0.5rem 0;
-      /* padding: 0 0.7rem; */
+      font-weight: 400;
+      font-size: 16px;
+      margin: 8px 0;
+      /* padding: 0 5px; */
     }
   </style>
 </head>
 <body>
-  <div class="qr-box-wrap">
-    <img class="qr-image" src="./images/image-qr-code.png" alt="">
-    <div class="qr-text-wrap">
-      <h3 class="qr-title">
-        Improve your front-end skills by building projects
-      </h3>
-      <p class="qr-desc">
-        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-      </p>
+  <div class="screen-centering">
+    <div class="qr-box-wrap">
+      <img class="qr-image" src="./images/image-qr-code.png" alt="">
+      <div class="qr-text-wrap">
+        <h3 class="qr-title">
+          Improve your front-end skills by building projects
+        </h3>
+        <p class="qr-desc">
+          Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+        </p>
+      </div>
     </div>
   </div>
   
