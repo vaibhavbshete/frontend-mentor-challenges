@@ -21,7 +21,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![](./screenshots/qr-component-solution-sh-web.png)
+![](./screenshots/qr-component-solution-sh-web.jpg)
 
 ### Links
 
@@ -78,5 +78,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/vaibhavbshete)
-- Twitter - [@yourusername](https://www.twitter.com/vaibhavbshete)
+- Frontend Mentor - [@vaibhavbshete](https://www.frontendmentor.io/profile/vaibhavbshete)
+- Twitter - [@vaibhavbshete](https://www.twitter.com/vaibhavbshete)
