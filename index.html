@@ -4,15 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Submissions to the FrontendMentor</title>
+    <title>My Submissions to FrontendMentor</title>
+    <style>
+        *{
+            padding: 0;
+            margin :0;
+            font-family: sans-serif;
+        }
+        body{
+            /* width: 100%; */
+            background-color: aliceblue;
+            padding: 0 2rem;
+        }
+        .center-prose{
+            
+            max-width: 53ch;
+            margin: 0 auto;
+
+        }
+
+        .center-prose h1{
+            font-size: 3rem;
+            margin: 2rem 0;
+            color: rgb(38, 56, 79);
+        }
+
+        .center-prose p{
+            margin: 1rem 0;
+            color: rgb(114, 138, 161);
+        }
+
+        .center-prose a{
+            color: rgb(70, 106, 150);
+            text-decoration: none;
+            padding: 0.5rem 0;
+        }
+
+        .center-prose a:hover{
+            background-color: rgba(30, 40, 47, 0.1);
+        }
+
+        .center-prose ul {
+            padding: 0;
+            width: 100%;
+            list-style: none;
+        }
+
+        .center-prose li{
+            width: 100%;
+        }
+
+        .center-prose li a{
+            display: block;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .center-prose li a::before{
+            content: '\2605';
+            display:block;
+            width: 2rem;
+            height: 1rem;
+            line-height: 1rem;
+            position: absolute;
+            left: 0rem;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    Here you will find my submissions to the frontend mentor challenes I took.<br>
-    Take a look:
-    <ul>
-        <li>
-            <a href="qr-code-component/">QR Code Component</a>
-        </li>
-    </ul>
+    <div class="center-prose">
+        <h1>
+            <small>My Submissions to</small><br> Frontend Mentor
+        </h1>
+        <p>Here you will find my submissions to the frontend mentor challegnes I took.</p>
+        <p>Take a look:</p>
+        <ul>
+            <li>
+                <a href="qr-code-component/">QR Code Component</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
