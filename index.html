@@ -5,16 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Submissions to FrontendMentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"> 
     <style>
         *{
             padding: 0;
             margin :0;
-            font-family: sans-serif;
+            font-family:'Noto Sans', sans-serif;
+            font-weight: 400;
         }
         body{
             /* width: 100%; */
             background-color: aliceblue;
             padding: 0 2rem;
+        }
+        .font-bold{
+            font-weight: 600;
         }
         .center-prose{
             
@@ -34,13 +41,13 @@
             color: rgb(114, 138, 161);
         }
 
-        .center-prose a{
+        .center-prose li a{
             color: rgb(70, 106, 150);
             text-decoration: none;
             padding: 0.5rem 0;
         }
 
-        .center-prose a:hover{
+        .center-prose li a:hover{
             background-color: rgba(30, 40, 47, 0.1);
         }
 
@@ -72,12 +79,38 @@
             transform: translateY(-50%);
             text-align: center;
         }
+
+        a.btn-link-dark{
+            display: flex;
+            margin:4rem auto;
+            width: max-content;
+            gap: 0.25rem;
+            align-items: center;
+            background-color: rgb(41, 44, 47);
+            color:white;
+            color:white;
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 0.2rem;
+            transition-property: box-shadow;
+            transition-duration: 300ms;
+        }
+
+        a.btn-link-dark img{
+            width: 24px;
+        }
+
+        a.btn-link-dark:hover{
+            background-color: rgb(35, 39, 43);
+            box-shadow: 0.5px 0.3px 10px rgba(30, 40, 47, 0.75);
+        }
     </style>
 </head>
 <body>
     <div class="center-prose">
         <h1>
-            <small>My Submissions to</small><br> Frontend Mentor
+            <small>my submissions to</small><br>
+            <span class="font-bold">Frontend Mentor</span>
         </h1>
         <p>Here you will find my submissions to the frontend mentor challegnes I took.</p>
         <p>Take a look:</p>
@@ -86,6 +119,11 @@
                 <a href="qr-code-component/">QR Code Component</a>
             </li>
         </ul>
+
+        <a href="https://github.com/vaibhavbshete/frontend-mentor-challenges" class="btn-link-dark">
+            <img src="GitHub-Mark-Light-32px.png" alt="github cat">
+            Github Repo &rarr;
+        </a>
     </div>
 </body>
 </html>
