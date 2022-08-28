@@ -14,7 +14,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; position: fixed; bottom: 0; padding: 5px; }
+    .attribution { font-size: 0.65rem; text-align: center; position: fixed; bottom: 0; padding: 0.25rem }
     .attribution a { color: hsl(228, 45%, 44%); }
 
     :root{
@@ -45,57 +45,73 @@
     }
 
     .qr-image {
-      border-radius: 10px;
+      border-radius: 0.6rem;
+      display: block;
       width: 100%;
     }
     .qr-box-wrap{
       background-color: var(--white);
-      border-radius: 20px;
-      padding: 16px;
+      border-radius: 1.2rem;
+      padding: 1rem;
       width: 100%;
-      max-width: 320px;
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+      max-width: 18rem;
+      box-shadow: 0 0 3rem rgba(0, 0, 0, 0.08);
     }
 
     .qr-text-wrap{
-      padding: 0 24px;
-      margin: 20px 0;
+      padding: 0 1rem;
+      margin: 1.4rem 0;
     }
 
     .qr-title{
       color: var(--dark-blue);
-      font-size: 24px;
+      font-size: 1.39rem;
       font-weight: 700;
       text-align: center;
-      margin: 16px 0;
+      margin: 1.1rem 0;
     }
     .qr-desc{
       color: var(--grayish-blue);
       text-align: center;
       font-weight: 400;
-      font-size: 16px;
-      margin: 8px 0;
+      font-size: 0.965rem;
+      margin: 0.58rem 0;
+      /* margin-bottom: 0.7rem; */
     }
   </style>
 </head>
 <body>
-  <div class="screen-centering">
+  <!-- <div 
+  style="position:fixed;top:0;left:0;width:1440px;height: 800px;">
+    <img
+     
+    style="width:1440px;height: 800px;opacity: 50%;;"
+    src="./design/desktop-design.jpg" alt="">
+  </div> -->
+  <!-- <div 
+  style="position:fixed;top:0;left:0;width:375px;height: 667px;">
+    <img
+     
+    style="width:375px;height: 667px;opacity: 50%;;"
+    src="./design/mobile-design.jpg" alt="">
+  </div> -->
+  <main class="screen-centering">
     <div class="qr-box-wrap">
       <img class="qr-image" src="./images/image-qr-code.png" alt="">
       <div class="qr-text-wrap">
-        <h3 class="qr-title">
+        <h1 class="qr-title">
           Improve your front-end skills by building projects
-        </h3>
+        </h1>
         <p class="qr-desc">
           Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
         </p>
       </div>
     </div>
-  </div>
+  </main>
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Vaibhav Shete</a>.
-  </div>
+  </footer>
 </body>
 </html>
