@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    
+  </style>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div style="position: relative; opacity: 50%;z-index: 20;">
+    <!-- <img src="./design/desktop-design.jpg" style="width: 1440px;height:1024px;position:absolute;top:0;left:0" alt=""> -->
+    <!-- <img src="./design/mobile-design.jpg" style="width: 375px;height:667px;position:absolute;top:0;left:0" alt=""> -->
+  </div>
+  <div class="centering-flex">
+    <main class="spend-card-wrap">
+      <section class="balance-card">
+        <img src="./images/logo.svg" alt="" class="company-logo">
+        <div class="balance-text">
+          My balance
+          <div class="amount">$921.48</div>
+        </div>
+      </section>
+      <section class="spending-card">
+        <div class="chart-wrap">
+          <h1>Spending - Last 7 days</h1>
+          <div class="chart-figure-scroll-box">
+            <div class="chart-figure">
+              <div class="chart-bar-col">
+                <div class="bar-space">
+                  <div class="bar" data-day="mon">
+                    <div class="fill"></div>
+                    <div class="bar-text"></div>
+                  </div>
+                </div>
+                <div class="label">mon</div>
+              </div>
+              <div class="chart-bar-col">
+                <div class="bar-space">
+                  <div class="bar" data-day="tue">
+                    <div class="fill"></div>
+                    <div class="bar-text"></div>
+                  </div>
+                </div>
+                <div class="label">tue</div>
+              </div>
+              <div class="chart-bar-col">
+                <div class="bar-space">
+                  <div class="bar" data-day="wed">
+                    <div class="fill"></div>
+                    <div class="bar-text">0.00</div>
+                  </div>
+                </div>
+                <div class="label">wed</div>
+              </div>
+              <div class="chart-bar-col">
+                <div class="bar-space">
+                  <div class="bar" data-day="thu">
+                    <div class="fill"></div>
+                    <div class="bar-text"></div>
+                  </div>
+                </div>
+                <div class="label">thu</div>
+              </div>
+              <div class="chart-bar-col">
+                <div class="bar-space">
+                  <div class="bar" data-day="fri">
+                    <div class="fill"></div>
+                    <div class="bar-text"></div>
+                  </div>
+                </div>
+                <div class="label">fri</div>
+              </div>
+              <div class="chart-bar-col">
+                <div class="bar-space">
+                  <div class="bar" data-day="sat">
+                    <div class="fill"></div>
+                    <div class="bar-text"></div>
+                  </div>
+                </div>
+                <div class="label">sat</div>
+              </div>
+              <div class="chart-bar-col">
+                <div class="bar-space">
+                  <div class="bar" data-day="sun">
+                    <div class="fill"></div>
+                    <div class="bar-text"></div>
+                  </div>
+                </div>
+                <div class="label">sun</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <footer class="total-footer">
+        <section class="total-wrap">
+          Total this month
+          <div class="amount">$478.33</div>
+        </section>
+        <section class="growth-wrap">
+          <div class="percentage">+2.4%</div>
+          from last month
+        </section>
+      </footer>
+    </section>
+
+    </main>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/vaibhavbshete">Vaibhav Shete</a>.
+  </div>
+  <script src="assets/script.js">
+    
+  </script>
+</body>
+</html>
