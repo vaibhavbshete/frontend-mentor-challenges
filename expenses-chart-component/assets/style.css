@@ -202,10 +202,11 @@ body{
     justify-content: space-between;
     align-items:flex-end;
     flex-wrap: wrap;
-    border-top: 2px solid var(--medium-brown);
+    border-top: 2px solid var(--cream);
     /* padding: 0 0 1.6rem ; */
     margin-top: 1rem;
     font-size: 0.85rem;
+    color: var(--medium-brown);
 }
 
 .total-wrap{
@@ -215,6 +216,7 @@ body{
     font-size: 1.66rem;
     font-weight: 700;
     margin: 0.3rem 0;
+    color: var(--dark-brown);
 }
 
 
@@ -225,7 +227,8 @@ body{
 }
 .growth-wrap .percentage{
     font-weight: 700;
-    margin: 0.08rem 0
+    margin: 0.08rem 0;
+    color: var(--dark-brown);
 }
 
 @media screen and (min-width:534px) {
