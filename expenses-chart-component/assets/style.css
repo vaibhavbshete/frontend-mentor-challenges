@@ -88,7 +88,8 @@ body{
 .balance-card .company-logo{
     position: absolute;
     height: 2.22rem;
-    top: 1.8rem;
+    top: 50%;
+    transform: translateY(-50%);
     right: 1.3rem;
 }
 .spending-card{
@@ -237,6 +238,10 @@ body{
         border-radius: 1.2rem; 
     }
 
+    .balance-card .company-logo{
+        height: 2.77rem;
+        right: 2.3rem;
+    }
     .spending-card{
         margin-top: 1.3rem;
         padding: 1.6rem 2.2rem;
