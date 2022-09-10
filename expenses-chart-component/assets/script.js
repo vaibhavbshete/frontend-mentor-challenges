@@ -15,8 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         /* if (daydata.amount == maxAmount) {
           daybar.classList.add('max');
         }*/
-        if (days.indexOf(day) == (new Date()).getDay()){
-          daybar.classList.add('max');
+        if ((days.indexOf(day) + 1) % 7 == (new Date()).getDay()) {
+          daybar.classList.add('thisweek');
+        }
         daybar.querySelector('.bar-text').innerText = '$' + daydata.amount;
       });
     });

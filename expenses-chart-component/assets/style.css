@@ -175,7 +175,7 @@ body{
     height: 100%;
     width: 100%;
 }
-.chart-bar-col .bar.max .fill{
+.chart-bar-col .bar.thisweek .fill{
     background-color: var(--cyan);
 }
 .chart-bar-col .bar:hover .fill{
