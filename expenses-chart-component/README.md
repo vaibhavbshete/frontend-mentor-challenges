@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/vaibhavbshete/frontend-mentor-challenges/tree/main/expenses-chart-component)
-- Live Site URL: [Add live site URL here](https://vaibhavbshete.github.io/frontend-mentor-challenges/expenses-chart-component/)
+- Solution URL: [Github repo](https://github.com/vaibhavbshete/frontend-mentor-challenges/tree/main/expenses-chart-component)
+- Live Site URL: [on Github pages](https://vaibhavbshete.github.io/frontend-mentor-challenges/expenses-chart-component/)
 
 ## My process
 
