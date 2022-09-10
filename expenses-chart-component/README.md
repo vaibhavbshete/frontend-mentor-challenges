@@ -53,6 +53,6 @@ Depending on how it looks on different displays, I may choose to change the brea
 
 ## Author
 
-- Website - [Vaibhav](https://www.your-site.com)
+- Website - [Vaibhav Shete](https://vaibhavbshete.github.io)
 - Frontend Mentor - [@vaibhavbshete](https://www.frontendmentor.io/profile/vaibhavbshete)
 - Twitter - [@vaibhavbshete](https://www.twitter.com/vaibhavbshete)
