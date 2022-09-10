@@ -227,3 +227,45 @@ body{
     font-weight: 700;
     margin: 0.08rem 0
 }
+
+@media screen and (min-width:534px) {
+    .balance-card{
+        padding: 1.4rem 1.85rem 1.4rem; 
+        border-radius: 1.2rem; 
+    }
+
+    .spending-card{
+        margin-top: 1.3rem;
+        padding: 1.6rem 2.2rem;
+        border-radius: 1rem;
+    }
+    .spending-card h1{
+        font-size: 1.79rem; 
+    }
+    .chart-figure-scroll-box{
+        margin-top: 1rem; 
+    }
+
+    .chart-bar-col .label{
+        font-size: 0.8rem; 
+    }
+
+    .chart-bar-col .bar .fill{
+        border-radius:0.3rem;
+    }
+
+    .total-footer{
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .total-wrap{
+        margin-top: 2rem;
+    }
+
+    .total-wrap .amount{
+        margin-top: 0rem;
+        font-size: 2.7rem; 
+    }
+}
