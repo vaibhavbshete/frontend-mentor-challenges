@@ -54,7 +54,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: max-content;
+    min-height: 100vh;
     width: 100%;
     padding: 0 0.9rem;
 }
@@ -74,6 +75,10 @@ body{
     align-items: center;
     position: relative;
     font-size: clamp(0.84rem, 2vw, 1rem); 
+}
+
+.balance-text-heading{
+    
 }
 
 .balance-card .amount{
