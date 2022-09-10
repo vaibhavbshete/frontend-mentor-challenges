@@ -74,11 +74,12 @@ body{
     justify-content: space-between;
     align-items: center;
     position: relative;
-    font-size: clamp(0.84rem, 2vw, 1rem); 
+    
 }
 
 .balance-text-heading{
-    
+    font-weight: 400;
+    font-size: clamp(0.84rem, 2vw, 1rem); 
 }
 
 .balance-card .amount{
@@ -217,6 +218,10 @@ body{
 
 .total-wrap{
     margin-top: 1.3rem;
+}
+.total-wrap h3{
+    font-weight: 400;
+    font-size: 0.85rem;
 }
 .total-wrap .amount{
     font-size: 1.66rem;
