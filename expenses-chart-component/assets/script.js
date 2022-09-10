@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let height = daydata.amount / maxAmount * 100;
         let daybar = document.querySelector('[data-day=' + daydata.day);
         daybar.style.height = height + "%";
-        if (daydata.amount == maxAmount) {
+        /* if (daydata.amount == maxAmount) {
           daybar.classList.add('max');
-        }
+        }*/
+        if (days.indexOf(day) == (new Date()).getDay()){
+          daybar.classList.add('max');
         daybar.querySelector('.bar-text').innerText = '$' + daydata.amount;
       });
     });
