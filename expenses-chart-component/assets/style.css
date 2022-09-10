@@ -1,5 +1,29 @@
 .attribution { font-size: 11px; text-align: center; position: fixed;bottom: 0;left:0;padding: 0.5rem; }
 .attribution a { color: hsl(228, 45%, 44%); }
+.refimgs {
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+.refimgs.mobile{
+    display: block;
+    width: 375px;height:667px;
+}
+
+.refimgs.desktop{
+    display: none;
+    width: 1440px;height:1024px;
+}
+
+@media (min-width:500px) {
+    .refimgs.mobile{
+        display: none;
+    }
+    .refimgs.desktop{
+        display: block;
+    }
+}
 
 *{
     margin: 0;
