@@ -29,8 +29,8 @@
       text-white
       ">
         <div class=" bg-[url('../images/bg-card-back.png')] bg-cover shadow">
-          <div class="relative h-full w-full">
-            <div class="absolute top-[41.5%] h-[15%] left-[10%] w-[81%] leading-[100%] mx-auto text-right py-2 px-3 ">{{cvc || '000'}}</div>
+          <div class="relative h-full w-full text-base md:text-[clamp(0.7rem,0.1286rem+1.1905vw,1.2rem)]">
+            <div class="absolute bottom-[43%] h-[16.5%] left-[10%] w-[81%] leading-[100%] mx-auto text-right py-[2%] px-3 ">{{cvc || '000'}}</div>
           </div>
 
         </div>
@@ -44,9 +44,10 @@
       ">
         <div class="bg-[url('../images/bg-card-front.png')] bg-cover shadow">
           <div class="relative h-full w-full">
+            <img class="absolute w-1/5 top-[12.2%] left-[7.192%]" src="./images/card-logo.svg" alt="card-logo">
             <div class="absolute w-full left-0 top-1/2 px-5 text-2xl md:text-[length:clamp(1rem,_-0.1429rem_+_2.381vw,_2rem);]">{{ cardNumberWithSpaces || '0000 0000 0000 0000' }}</div>
-            <div class="absolute w-full left-0 bottom-6 flex justify-between text-xs px-6">
-              <div class=" uppercase">{{cardHolderName || 'Jane Appleseed'}}</div>
+            <div class="absolute w-full left-0 bottom-[10%] flex justify-between text-xs md:text-[length:clamp(0.5rem,-0.0714rem+1.1905vw,1rem)] px-[7.2%]">
+              <div class=" uppercase ">{{cardHolderName || 'Jane Appleseed'}}</div>
 
               <div class=" uppercase">{{expDate.month || '00'}}/{{expDate.year||'00'}}</div>
             </div>
