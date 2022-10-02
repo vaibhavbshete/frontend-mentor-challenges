@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .input-gradient-wrapper{
+        border:-2px;
+        border-radius:5px;
+    }
+    .input-gradient-wrapper:focus-within{
+        background: linear-gradient(to bottom, hsl(249, 99%, 64%) , hsl(278, 94%, 30%));
+
+    }
+    .active-input{
+        border-radius:inherit;
+        padding:0.5rem;
+        border-width:4px;
+        border-style:solid;
+        position: relative;
+        border:2px solid hsl(270, 3%, 87%);
+        width: 100%;
+        background: white;
+        background-clip:padding-box;
+        outline: none;
+    }
+    .active-input::placeholder{
+        color:hsl(270, 3%, 87%);
+    }
+    .active-input:invalid{
+        border:2px solid hsl(0, 100%, 66%);
+    }
+    .active-input:focus{
+        border: 2px solid transparent
+    }
+}
