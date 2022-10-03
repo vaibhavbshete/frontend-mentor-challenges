@@ -69,9 +69,10 @@ createApp({
     
     methods: {
         onCardNumInput(event) {
+
             // console.log(event);
             let cardInputTxt = event.target;
-            let cardNum = this.card.number.value;
+            let cardNum = event.target.value;
             // console.log(parseInt(cardNum));
             cardNum = cardNum.replace(/\s*/g, '');
             // validate
@@ -93,6 +94,8 @@ createApp({
                 wspaces = wspaces.substring(0, 19);
             }
             this.card.number.value = wspaces;
+            this.$forceUpdate();
+            // card.number.value = event.target.value
             return;
         },
         validate(item, itemkey, activeCheck=false) {
@@ -105,7 +108,7 @@ createApp({
             // }
             // items.forEach(item => {
             item.error = this.validations()[itemkey](item, activeCheck);
-            console.log(itemkey,'error',item.error);
+            // console.log(itemkey,'error',item.error);
             if (item.error !== "") {
                 this.formHasErrors = true;
                 // console.log(this.formHasErrors);
@@ -122,9 +125,9 @@ createApp({
                 // value.error = "Error hai "+key+" ka bhaiya!";
                 // console.log(value);
             }
-            console.log('b');
+            // console.log('b');
             if (!this.formHasErrors) {
-                console.log('a');
+                // console.log('a');
                 this.cardSaved = true;
             }
         },
@@ -137,17 +140,18 @@ createApp({
                     let errMsg = "";
                     let numSansSpaces = numberTxt.value.replaceAll(/\s*/g, '');
                     if (isNaN(numSansSpaces)) {
-                        errMsg= "Only numbers allowed"
+                        errMsg = "Wrong format, numbers only";
+                        return errMsg;
                     }
                     if (numSansSpaces.length < 16) {
-                        errMsg+="16 digit number reqired"
+                        errMsg+="16 digit number required"
                     }
                     return errMsg;
                 },
                 cvc(cvc,submitCheck) {
                     // console.log(this);
                     if (isNaN(cvc.value)){
-                      return "Only numbers allowed"
+                      return "Numbers only"
                     }
                     if (cvc.value.length != 3 && submitCheck) {
                         return "Only 3 digits allowed"
@@ -158,11 +162,11 @@ createApp({
                     let errMsg = "";
                     // console.log(dateObj);x
                     if (isNaN(dateObj.month.value) || isNaN(dateObj.year.value)){
-                        errMsg += "Only numbers allowed";
+                        errMsg += "Numbers only";
                         // return errMsg;
                     }
-                    if (dateObj.month.value > 12 || dateObj.month.value < 1) {
-                        errMsg += "Month should be in 1-12 range";
+                    else if (dateObj.month.value > 12 || dateObj.month.value < 1) {
+                        errMsg += "Numbers only in 1-12 range";
                         // return errMsg;
                     }
                     return errMsg;

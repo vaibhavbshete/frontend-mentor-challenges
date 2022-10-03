@@ -32,7 +32,7 @@
         ">
           <div class="bg-[url('../images/bg-card-back.png')] bg-cover shadow-2xl rounded-md">
             <div class="relative h-full w-full text-base md:text-[clamp(0.7rem,0.1286rem+1.1905vw,1.2rem)]">
-              <div class="absolute bottom-[43%] h-[16.5%] left-[10%] w-[81%] leading-[100%] mx-auto text-right py-[2%] px-3 ">{{card.cvc.value || '000'}}</div>
+              <div class="absolute bottom-[43%] h-[16.5%] left-[10%] w-[81%] flex items-center justify-end mx-auto text-right py-[2%] px-3 ">{{card.cvc.value || '000'}}</div>
             </div>
           </div>
         </div>
@@ -46,9 +46,9 @@
           <div class="bg-[url('../images/bg-card-front.png')] bg-cover shadow-2xl rounded-md">
             <div class="relative h-full w-full">
               <img class="absolute w-1/5 top-[12.2%] left-[7.192%]" src="./images/card-logo.svg" alt="card-logo">
-              <div class="absolute w-full left-0 top-1/2 px-5 text-2xl md:text-[clamp(1rem,-0.1429rem+2.381vw,1.7rem)]">{{ card.number.value || '0000 0000 0000 0000' }}</div>
-              <div class="absolute w-full left-0 bottom-[10%] flex justify-between text-xs md:text-[length:clamp(0.5rem,-0.0714rem+1.1905vw,1rem)] px-[7.2%]">
-                <div class=" uppercase ">{{card.name.value || 'Jane Appleseed'}}</div>
+              <div class="absolute w-full left-0 top-1/2 px-5 text-2xl uppercase md:text-[clamp(1rem,-0.1429rem+2.381vw,1.7rem)]">{{ card.number.value || '0000 0000 0000 0000' }}</div>
+              <div class="absolute w-full max-w-full left-0 right-0 bottom-[10%] flex justify-between text-xs md:text-[length:clamp(0.5rem,-0.0714rem+1.104vw,0.9rem)] px-[7.2%]">
+                <div class=" uppercase overflow-clip grow-0">{{card.name.value || 'Jane Appleseed'}}</div>
                 <div class=" uppercase">{{card.expDate.month.value || '00'}}/{{card.expDate.year.value||'00'}}</div>
               </div>
             </div>
@@ -80,10 +80,11 @@
           <input
            class="active-input"
            :class="card.number.value==''?'':'uppercase'"
-           v-model="card.number.value"
+           @input="onCardNumInput($event)"
+           :value="card.number.value"
            type="text" inputmode="numeric" autocomplete="cc-number"
            placeholder="e.g. 1234 5678 9123 0000"
-           @input="onCardNumInput($event)"
+           @input=""
            @blur="validate(card.number,'number')">
         </div>
         <div class="text-red my-2">{{card.number.error}}</div>
