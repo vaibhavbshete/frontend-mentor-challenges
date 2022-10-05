@@ -10,7 +10,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" >
   <title>Frontend Mentor | Interactive card details form</title>
-  <link rel="stylesheet" href="public/main.css">
+  <link rel="stylesheet" href="public/main.css" id="stylelink">
+  <script>
+    // let manofest =null;
+    fetch('./public/mix-manifest.json')
+        .then(function(response) {return response.json()})
+        .then(function(manifest) {
+          // manofest=manifest;
+            const link = document.createElement('link');
+            const simplelink = document.getElementById('stylelink');
+            link.rel = 'stylesheet';
+            link.onload = ()=>{
+                simplelink.remove();
+            }
+            link.href ='./public'+ manifest['/main.css'];
+            document.head.appendChild(link);
+
+            // document.addEventListener('DOMContentLoaded',function(){
+              // console.log('loading scrit');
+              let scrpt=document.createElement('script');
+            scrpt.src='./public'+ manifest['/main.js'];
+            document.body.appendChild(scrpt);
+            // })
+            
+        });
+</script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -175,7 +199,9 @@
 
 
 
-   
-  <script src="public/main.js"></script>
+   <!-- <script>
+    
+   </script> -->
+  <!-- <script src="public/main.js"></script> -->
 </body>
 </html>

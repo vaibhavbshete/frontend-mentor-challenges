@@ -199,8 +199,8 @@ createApp({
                 if (now > expDate) {
                     errMsg += "Only future date ";
                 }
-                return errMsg;
             }
+            return errMsg;
         },
         validations(){
             return {

@@ -1,6 +1,6 @@
 const mix = require('laravel-mix');
 
-mix.disableNotifications().setPublicPath('public');
+mix.disableNotifications().setPublicPath('public').version();
 
 mix.css('./src/main.css', 'main.css').options({
     processCssUrls: false
