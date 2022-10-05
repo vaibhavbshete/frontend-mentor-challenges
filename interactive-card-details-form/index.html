@@ -70,22 +70,29 @@
           <input class="active-input"
            v-model="card.name.value"
            type="text" maxlength="32" autocomplete="cc-name"
-           placeholder="e.g. Jane Appleseed">
+           placeholder="e.g. Jane Appleseed"
+           data-validation-function="name"
+           data-validation-field="card.name"
+           @blur="event=>validate(event.target,true)">
         </div>
+        <div class="text-red my-2">{{card.name.error}}</div>
       </label>
     
       <label class="mt-6 block">
         <h6 class="my-2 uppercase text-sm font-bold">Card Number</h6>
         <div class="input-gradient-wrapper">
           <input
+           name="number"
            class="active-input"
            :class="card.number.value==''?'':'uppercase'"
-           @input="onCardNumInput($event)"
+           @input="event=>{modInputWSpaces(event);validate(event.target)}"
            :value="card.number.value"
            type="text" inputmode="numeric" autocomplete="cc-number"
            placeholder="e.g. 1234 5678 9123 0000"
-           @input=""
-           @blur="validate(card.number,'number')">
+           data-validation-function="number"
+           data-validation-field="card.number"
+           @blur="event=>validate(event.target,true)"
+           >
         </div>
         <div class="text-red my-2">{{card.number.error}}</div>
       </label>
@@ -94,18 +101,29 @@
       <div class="mt-6 flex gap-4 w-full ">
         <div class=" w-1/2">
           <h6 class="my-2 uppercase text-sm font-bold">Exp. Date (MM/YY)</h6>
-          <div class="flex gap-2">
-            <div class="w-1/2 input-gradient-wrapper">
+          <div class="flex gap-2 rounded">
+            <div class="w-1/2 input-gradient-wrapper" :class="(card.expDate.year.error || card.expDate.month.error)? 'bg-red':''">
               <input class="active-input"
-               v-model="card.expDate.month.value" 
+               name="exp-Month"
                maxlength="2" type="text" inputmode="numeric" autocomplete="cc-exp-month" 
                placeholder="MM" pattern="0[1-9]|1[0-2]" title="MM"
-               @input=""
-               @blur="validate(card.expDate,'expDate');leadZero(card.expDate.month)">
+               :value="card.expDate.month.value"
+               data-validation-function="expDateMonth"
+               data-validation-field="card.expDate"
+               @input="event=>{card.expDate.month.value=event.target.value;validate(event.target)}"
+               @blur="event=>{leadZero(card.expDate.month);validate(event.target,true);}">
             </div>
-            <div class="w-1/2 input-gradient-wrapper">
-              <input class="active-input" v-model="card.expDate.year.value" maxlength="2" type="text" inputmode="numeric" autocomplete="cc-exp-year" placeholder="YY" pattern="\d{2}" title="YY"
-              @blur="validate(card.expDate,'expDate')">
+            <div class="w-1/2 input-gradient-wrapper " :class="(card.expDate.year.error || card.expDate.month.error)? 'bg-red':''">
+              <input class="active-input"
+               name="expDateYear"
+               maxlength="2" type="text" 
+               inputmode="numeric" 
+               :value="card.expDate.year.value"
+               data-validation-function="expDateYear"
+               data-validation-field="card.expDate"
+               @input="event=>card.expDate.year.value=event.target.value"
+               autocomplete="cc-exp-year" placeholder="YY" pattern="\d{2}" title="YY"
+               @blur="event=>validate(event.target,true)">
             </div>
           </div>
         <div class="text-red my-2">{{card.expDate.error}}</div>
@@ -115,12 +133,15 @@
           <h6 class="my-2 uppercase text-sm font-bold">CVC</h6>
           <div class="input-gradient-wrapper">
             <input class="active-input"
-             v-model="card.cvc.value"
+             name="cvc"
              maxlength="3"
              type="text" inputmode="numeric"
              autocomplete="cc-csc" placeholder="e.g. 123"
-             @input="validate(card.cvc,'cvc')"
-             @blur="validate(card.cvc,'cvc',true)"
+             data-validation-function="cvc"
+             data-validation-field="card.cvc"
+             :value="card.cvc.value"
+             @input="event=>{card.cvc.value=event.target.value;validate(event.target)}"
+             @blur="event=>validate(event.target,true)"
              >
           </div>
         <div class="text-red my-2">{{card.cvc.error}}</div>
@@ -140,6 +161,10 @@
         <div class="mt-8 text-center text-3xl uppercase">Thank you!</div>
         <div class="mt-6 text-center">We've added your card details</div>
         <button class="mt-8 bg-very-dark-violet text-white p-3 w-full rounded-lg" type="button" @click="clearForm();">Continue</button>
+        <aside class="attribution absolute bottom-0 right-0 m-4">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://vaibhavbshete.github.io/frontend-mentor-challenges/">Vaibhav Shete</a>.
+        </aside>
     </section>
   </div>
 </div>
@@ -150,10 +175,7 @@
 
 
 
-   <aside class="attribution fixed top-0 right-0 m-4">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://vaibhavbshete.github.io/frontend-mentor-challenges/">Vaibhav Shete</a>.
-  </aside>
+   
   <script src="public/main.js"></script>
 </body>
 </html>
