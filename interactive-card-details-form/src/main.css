@@ -4,6 +4,7 @@
 
 @layer components {
     .input-gradient-wrapper{
+        display:block;
         border:-2px;
         border-radius:5px;
     }
