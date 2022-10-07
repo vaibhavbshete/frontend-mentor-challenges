@@ -99,7 +99,7 @@
            data-validation-field="card.name"
            @blur="event=>validate(event.target,true)">
         </span>
-        <div class="text-red my-2">{{card.name.error}}</div>
+        <span class="block text-red my-2">{{card.name.error}}</span>
       </label>
     
       <label class="mt-6 block">
@@ -118,17 +118,18 @@
            @blur="event=>validate(event.target,true)"
            >
         </span>
-        <div class="text-red my-2">{{card.number.error}}</div>
+        <span class="block text-red my-2">{{card.number.error}}</span>
       </label>
     
     
       <div class="mt-6 flex gap-4 w-full ">
-        <label class=" w-1/2">
-          <span class="my-2 uppercase text-sm tracking-wider">Exp. Date (MM/YY)</span>
+        <span class=" w-1/2">
+          <span class="my-2 uppercase text-sm tracking-wider">Exp. Date (<label for="monthInput">MM</label>/<label for="yearInput">YY</label>)</span>
           <span class="flex gap-2 rounded">
             <span class="w-1/2 input-gradient-wrapper" :class="(card.expDate.year.error || card.expDate.month.error)? 'bg-red':''">
               <input class="active-input"
                name="exp-Month"
+               id="monthInput"
                maxlength="2" type="text" inputmode="numeric" autocomplete="cc-exp-month" 
                placeholder="MM" pattern="0[1-9]|1[0-2]" title="MM"
                :value="card.expDate.month.value"
@@ -140,6 +141,7 @@
             <span class="w-1/2 input-gradient-wrapper " :class="(card.expDate.year.error || card.expDate.month.error)? 'bg-red':''">
               <input class="active-input"
                name="expDateYear"
+               id="yearInput"
                maxlength="2" type="text" 
                inputmode="numeric" 
                :value="card.expDate.year.value"
@@ -150,12 +152,12 @@
                @blur="event=>validate(event.target,true)">
             </span>
           </span>
-          <div class="text-red my-2">{{card.expDate.error}}</div>
+          <span class="block text-red my-2">{{card.expDate.error}}</span>
 
-        </label>
+        </span>
         <label class=" w-1/2">
           <span class="my-2 uppercase text-sm tracking-wider">CVC</span>
-          <div class="input-gradient-wrapper">
+          <span class="input-gradient-wrapper">
             <input class="active-input"
              name="cvc"
              maxlength="3"
@@ -167,8 +169,8 @@
              @input="event=>{card.cvc.value=event.target.value;validate(event.target)}"
              @blur="event=>validate(event.target,true)"
              >
-          </div>
-          <div class="text-red my-2">{{card.cvc.error}}</div>
+          </span>
+          <span class="block text-red my-2">{{card.cvc.error}}</span>
 
         </label>
       </div>
