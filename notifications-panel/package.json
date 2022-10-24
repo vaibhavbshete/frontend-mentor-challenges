@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "postcss": "^8.4.18",
+    "postcss-loader": "^7.0.1",
+    "sass": "^1.55.0",
+    "vue": "^3.2.41",
+    "vue-loader": "^17.0.0",
+    "vue-template-compiler": "^2.7.13",
+    "webpack": "^5.74.0"
+  }
+}
