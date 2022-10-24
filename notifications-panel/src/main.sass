@@ -1,4 +1,29 @@
+@font-face 
+    font-family: 'Plus Jakarta Sans'
+    src: url('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
+    font-weight: Variable
+// resets
+*
+    border:0
+    padding: 0
+    margin: 0
+    font-size: 16px
+
+%header-reset
+    margin-block: 0
+    font-size: 1rem
+
+button
+    min-width: 5rem
+    
+body
+    font-family: 'Plus Jakarta Sans', sans-serif
 h1
-    color: aquamarine
+    @extend %header-reset
+    font-weight: 600
+    color: slateblue
+    font-size: 1.8rem
+
 h5 
+    @extend %header-reset
     color: red
