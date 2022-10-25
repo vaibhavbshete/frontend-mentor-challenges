@@ -1,35 +1,99 @@
+// resets
+@use 'resets'
 @font-face 
     font-family: 'Plus Jakarta Sans'
     src: url('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
     font-weight: Variable
-// resets
 :root
     font-size:16px
-        
-*
-    border:0
-    padding: 0
-    margin: 0
+// colors
+// Primary
+$red: hsl(1, 90%, 64%)
+$blue: hsl(219, 85%, 26%)
 
-%header-reset
-    margin-block: 0
-    font-size: 1rem
+// Neutral
 
-button
-    min-width: 5rem
-    
+$white: hsl(0, 0%, 100%)
+$very-light-grayish-blue: hsl(210, 60%, 98%)
+$light-grayish-blue-1: hsl(211, 68%, 94%)
+$light-grayish-blue-2: hsl(205, 33%, 90%)
+$grayish-blue: hsl(219, 14%, 63%)
+$dark-grayish-blue: hsl(219, 12%, 42%)
+$very-dark-blue: hsl(224, 21%, 14%)
+
 body
     font-family: 'Plus Jakarta Sans', sans-serif
+    font-weight: 500
+    background-color: $very-light-grayish-blue
+    padding-block: 2rem
+
 h1
     @extend %header-reset
-    font-weight: 600
-    color: slateblue
-    font-size: 1.8rem
+    font-weight: 800
+    color: $very-dark-blue
+    font-size: 1.2rem
+    line-height:100%
 
-h5 
-    @extend %header-reset
-    color: red
+a
+    text-decoration: none
+.main-wrapper
+    box-shadow: 0 0 2rem $light-grayish-blue-1
+    border-radius:0.8em
+    background-color: $white
+    max-width: 50ch
+    margin-inline: auto
+    padding-inline: 1.5rem
+    overflow-block: auto
 
+.title
+    padding-block: 2rem
+    display: flex
+    justify-content: space-between
+
+.count-badge
+    background-color: $blue
+    border-radius: 0.3rem
+    color: $white
+    vertical-align: bottom
+    display: inline-block
+    font-size: 0.8rem
+    margin-inline: 0.2rem
+    padding-inline: 0.6rem
+    // padding-block-start: 0rem
+    line-height: 0.8rem
+    padding-block: 0.2rem
+.title-action-link
+    font-size: 0.8rem
+    color: $dark-grayish-blue
+.notifications > * + *
+    margin-block-start: 0.5rem 
+.notification
+    display: flex
+    font-size: 0.8rem
+    .main
+        // display: flex
+        padding-block: 1rem 
+        justify-content: stretch
+        align-items: center
+        min-height: 3.2rem
+    img
+        width: 2.2rem
+        height: 2.2rem
+        border-radius: 1.1rem
+        background-color: $dark-grayish-blue
+        margin: 1rem
+    .preview
+        margin-block-start: 0.5rem
+        margin-inline-end: 1rem
+        color: $grayish-blue
+        border-radius: 0.3rem
+        border: 1px solid $light-grayish-blue-1
+        padding:0.8rem
+.notification.unread
+    background-color: $very-light-grayish-blue
+    // padding-block: 0.8rem
+    border-radius: 0.4rem
+    box-shadow: 0 0.05rem 0 $light-grayish-blue-1
 
 .attribution
     font-size: 11px
