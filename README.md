@@ -9,4 +9,5 @@ Instead of creating a new repository for each challenge, I have created one repo
 
 ## Index
 1. [QR Component](qr-code-component)
-1. [Expenses Chart](expenses-chart-component) 
+1. [Expenses Chart](expenses-chart-component)
+1. [Interactive Card Details Form](interactive-card-details-form)
