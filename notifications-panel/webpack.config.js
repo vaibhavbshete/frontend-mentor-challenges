@@ -47,8 +47,8 @@ module.exports = {
             filename: '../index.htm',
             favicon: './assets/images/favicon-32x32.png',
             hash: true,
-            
-            title: 'Henlo'
+            inject:false,
+            title: 'Notification Page | Frontend Mentor'
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
