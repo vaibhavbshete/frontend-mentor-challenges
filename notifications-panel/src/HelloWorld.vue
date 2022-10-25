@@ -9,23 +9,18 @@ button{
 
 <template>
     <h1>{{message}}</h1>
-    {{ count }} <button @click="ale">Count</button>
+    <button @click="count++">{{count}}</button>
 </template>
 
 <script>
 export default {
     data(){
         return {
-            message :'Hello World from other side',
-count: 0
+            message :'Hello World from other side!!',
+            count: 0
         }
     },
-    methods: {
-        ale() {
-    console.log('gg');
-    this.count++
-    }
-}
+
 
 
 

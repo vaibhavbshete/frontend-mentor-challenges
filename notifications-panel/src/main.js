@@ -1,6 +1,6 @@
 import { createApp } from "vue";  
 import HelloWorld from "./HelloWorld.vue";
-import style from "./main.sass";
+import style from "./style.sass";
 
 createApp({
     data() {
@@ -10,17 +10,13 @@ createApp({
         }
     },
     mounted() {
-        this.message = "ppp";
-        console.log('before',this.message);
         setInterval(advance, 500);
         const self = this;   
         function advance() {
-            console.log( self.message);
+
             self.count++
         }
-        this.count++;
-        this.count++;
-        console.log('after',this.message);
+
     },
     components: {
         HelloWorld

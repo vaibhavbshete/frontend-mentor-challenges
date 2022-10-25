@@ -7,11 +7,13 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <h1>but first,</h1>
+    <h1>but first..</h1>
     <main id="app">
         {{message}} {{count}}
         <hello-world></hello-world>
     </main>
-    <!-- <script src="./dist/main.js"></script> -->
+    <script>
+       console.log('compilation here' ,compilation)
+    </script>
 </body>
 </html>
