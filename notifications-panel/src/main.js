@@ -1,5 +1,4 @@
 import { createApp } from "vue";  
-import HelloWorld from "./HelloWorld.vue";
 import style from "./style.sass";
 
 createApp({
@@ -18,7 +17,4 @@ createApp({
         }
 
     },
-    components: {
-        HelloWorld
-    }
 }).mount('#app');
