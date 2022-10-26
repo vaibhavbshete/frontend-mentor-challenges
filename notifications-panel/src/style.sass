@@ -79,8 +79,9 @@ a
 .notification
     display: flex
     font-size: 0.8rem
-    align-items: center
+    // align-items: center
     cursor: pointer
+    padding-block: 0.85rem
     .sender
         font-weight: 800
         color: $very-dark-blue
@@ -92,12 +93,14 @@ a
     .main
         // display: flex
         width: 100%
-        padding-block: 1rem 
+        // padding-block: 1rem 
         justify-content: stretch
         align-items: center
-        min-height: 3.2rem
+        // min-height: 3.2rem
     .time
         color: $grayish-blue
+        display: block
+        margin-block-start: 0.15rem
     img.profile
         overflow: hidden
         font-size: 0.5rem
@@ -108,7 +111,8 @@ a
         width: 2.2rem
         height: 2.2rem
         border-radius: 1.1rem
-        margin: 1rem
+        margin-inline: 1.25rem
+        margin-block: 0
     img.image-preview
         // align-self: flex-end
         height:2.2rem
@@ -118,9 +122,9 @@ a
         margin-block-start: 0.5rem
         margin-inline-end: 1rem
         background-color: $white
-        color: $grayish-blue
+        color: $dark-grayish-blue
         border-radius: 0.3rem
-        border: 1px solid $light-grayish-blue-1
+        border: 1px solid $light-grayish-blue-2
         padding:0.8rem
 
     &.unread
@@ -145,3 +149,6 @@ a
     text-align: center
     a 
         color: hsl(228, 45%, 44%)
+@media screen and (min-width:$break-point)
+    :root
+        // font-size: 20px
