@@ -14,9 +14,7 @@ This is a solution to the [Notifications page challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -31,83 +29,55 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![desktop](./screenshots/1440x991desktop.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [on Github](https://github.com/vaibhavbshete/frontend-mentor-challenges/tree/main/notifications-panel)
+- Live Site URL: [on Github Pages](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Vue](https://vuejs.org/) - JS Framework
+- [Sass](https://sass-lang.com/) - For CSS
+- [Webpack](https://webpack.js.org) - For bundling everything for the browser
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I have been using [laravel-mix](laravel-mix.com/) up until now for setting up the project. It would take care of vue, tailwind and whatever preprocessing I needed. And laravel-mix assures its utility by being ready for as many front-end resources as possible. I knew it is a wrapper around [webpack](https://webpack.js.org) itself. And I wanted to know how much less of a setup is needed if I do not use laravel-mix. So I decided to use webpack directly, without the help of laravel-mix. Of course, where needed, I have peeked into laravel-mix's source code as well. But now I believe I can set up a webpack project by myself.
 
-To see how you can add code snippets, see below:
+Also as always suggested by frontendmentor, I decided to try [sass](https://sass-lang.com/) for css. VSCode does not show the colour decorators (preview and picker) and out-of-the-box, so I fiddled with some plugins, but none was satisfactory. I later learned that VSCode supports colour decorators in scss! Maybe because sass itself doen't validate as css before compilation, there must be a lot more coding required to support colour decorators in a different language altogether. Will try scss next time.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I wish to write a workflow for each of my frontend mentor projects and make it such that only that project's output is triggered by updates to that project's folder
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [createapp.dev](https://createapp.dev/webpack/vue) - Helps with the scary webpack configurations.
+- [Webpack Concepts](https://webpack.js.org/concepts/) - If you are new to webpack, this is a good place to start.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Vaibhav Shete](https://vaibhavbshete.github.io)
+- Frontend Mentor - [@vaibhavbshete](https://www.frontendmentor.io/profile/vaibhavbshete)
+- Twitter - [@vaibhavbshete](https://www.twitter.com/vaibhavbshete)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
