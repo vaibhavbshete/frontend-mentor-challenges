@@ -19,6 +19,7 @@ createApp({
                     senderImg: MarkWebpperAv,
                     text: 'reacted to your recent post',
                     subject: 'My first tournament today!',
+                    subjectType: 'post',
                     time: '1m ago',
                     read:false
                 },
@@ -35,6 +36,7 @@ createApp({
                     senderImg: JacobThAv,
                     text: 'has joined your group',
                     subject: 'Chess Club',
+                    subjectType: 'group',
                     time: '1 day ago',
                     read:false
                 },
@@ -55,6 +57,8 @@ createApp({
                     senderImg: KimerlySmithAv,
                     text: 'commented on your picture',
                     time: '1 week ago',
+                    preview: imgChess,
+                    previewType:"image",
                     read:true
                 },
                 {
@@ -62,6 +66,7 @@ createApp({
                     senderImg: NathanPeterAv,
                     text: 'reacted to your recent post',
                     subject: '5 end-game strategies to increase your win rate',
+                    subjectType: 'post',
                     time: '2 weeks ago',
                     read:true
                 },
@@ -69,11 +74,17 @@ createApp({
                     sender: 'Anna Kim',
                     senderImg: AnnaKimAv,
                     text: 'left the group',
-                    subject: ' Chess Club',
+                    subject: 'Chess Club',
+                    subjectType: 'group',
                     time: '2 weeks ago',
                     read:true
                 },
             ]
         }
     },
+    methods: {
+        markAllAsRead() {
+            for (const notification of this.notifications){notification.read=true}
+        }
+    }
 }).mount('#app');

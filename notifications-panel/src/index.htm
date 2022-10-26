@@ -20,21 +20,29 @@
 
   <main class="main-wrapper" id="app">
     <section class="title">
-      <h1>Notifications <span class="count-badge">3</span></h1>
+      <h1>Notifications <span class="count-badge">{{notifications.filter(notif=>!notif.read).length}}</span></h1>
       
-      <a class="title-action-link" href="#">Mark all as read</a>
+      <a class="title-action-link" href="#" @click.prevent="markAllAsRead">Mark all as read</a>
     </section>
     <div class="notifications">
+
+
+      <div v-for="notification in notifications" class="notification" :class="!notification.read?'unread':''" @click="notification.read=!notification.read">
+        <div>
             <img class="profile" :src="notification.senderImg" :alt="notification.sender">
-          <div class="main">
+        </div>  
+        <div class="main">
+            
+        
+            <div>
+              <div class="notification-text"><span class="sender">{{notification.sender}}</span> {{notification.text}} <span class="subject" :class="notification.subjectType=='group'?'group':'post'">{{notification.subject}}</span></div>
+              <time class="time">{{notification.time}}</time>
+            </div>
           
-          <div>
-            <div>{{notification.sender}} {{notification.text}} {{notification.subject}}</div>
-            <div>{{notification.time}}</div>
-          </div>
-          <div class="preview" v-if="notification.preview && notification.previewType=='text'">{{notification.preview}}</div>
+          <div class="text-preview" v-if="notification.preview && notification.previewType=='text'">{{notification.preview}}</div>
         </div>
-      </div>
+        <img class="image-preview" v-if="notification.previewType=='image'" :src="notification.preview">
+    </div>
       
       
     
@@ -44,7 +52,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://vaibhavbshete.github.io/frontend-mentor-challenges">Vaibhav Shete</a>.
   </div>
 </body>
 </html>
