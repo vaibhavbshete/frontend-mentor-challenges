@@ -25,10 +25,7 @@
       <a class="title-action-link" href="#">Mark all as read</a>
     </section>
     <div class="notifications">
-      <div v-for="notification in notifications" class="notification" :class="!notification.read?'unread':''">
-     <div>
-            <img src="" alt="">
-          </div>  
+            <img class="profile" :src="notification.senderImg" :alt="notification.sender">
           <div class="main">
           
           <div>

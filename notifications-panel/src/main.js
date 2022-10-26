@@ -1,5 +1,13 @@
 import { createApp } from "vue";  
 import style from "./style.sass";
+import MarkWebpperAv from "../assets/images/avatar-mark-webber.webp";
+import AngelaGrayAv from "../assets/images/avatar-angela-gray.webp";
+import AnnaKimAv from "../assets/images/avatar-anna-kim.webp";
+import JacobThAv from "../assets/images/avatar-jacob-thompson.webp";
+import KimerlySmithAv from "../assets/images/avatar-kimberly-smith.webp";
+import NathanPeterAv from "../assets/images/avatar-nathan-peterson.webp";
+import RizkyHasAv from "../assets/images/avatar-rizky-hasanuddin.webp";
+import imgChess from "../assets/images/image-chess.webp";
 
 createApp({
     data() {
@@ -8,6 +16,7 @@ createApp({
             notifications: [
                 {
                     sender: 'Mark Webber',
+                    senderImg: MarkWebpperAv,
                     text: 'reacted to your recent post',
                     subject: 'My first tournament today!',
                     time: '1m ago',
@@ -16,12 +25,14 @@ createApp({
                 
                 {
                     sender: 'Angela Gray',
+                    senderImg: AngelaGrayAv,
                     text: 'followed you',
                     time: '5m ago',
                     read:false
                 },
                 {
                     sender: 'Jacob Thompson',
+                    senderImg: JacobThAv,
                     text: 'has joined your group',
                     subject: 'Chess Club',
                     time: '1 day ago',
@@ -32,6 +43,7 @@ createApp({
                 
                 {
                     sender: 'Rizky Hasanuddin',
+                    senderImg: RizkyHasAv,
                     text: 'sent you a private message',
                     time: '5 days ago',
                     read:true,
@@ -40,12 +52,14 @@ createApp({
                 },
                 {
                     sender: 'Kimberly Smith',
+                    senderImg: KimerlySmithAv,
                     text: 'commented on your picture',
                     time: '1 week ago',
                     read:true
                 },
                 {
                     sender: 'Nathan Peterson',
+                    senderImg: NathanPeterAv,
                     text: 'reacted to your recent post',
                     subject: '5 end-game strategies to increase your win rate',
                     time: '2 weeks ago',
@@ -53,6 +67,7 @@ createApp({
                 },
                 {
                     sender: 'Anna Kim',
+                    senderImg: AnnaKimAv,
                     text: 'left the group',
                     subject: ' Chess Club',
                     time: '2 weeks ago',
