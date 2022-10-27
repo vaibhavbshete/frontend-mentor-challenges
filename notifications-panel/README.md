@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [on Github](https://github.com/vaibhavbshete/frontend-mentor-challenges/tree/main/notifications-panel)
-- Live Site URL: [on Github Pages](https://your-live-site-url.com)
+- Live Site URL: [on Github Pages](https://vaibhavbshete.github.io/frontend-mentor-challenges/notifications-panel/)
 
 ## My process
 
