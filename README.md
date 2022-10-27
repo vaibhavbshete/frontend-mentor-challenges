@@ -3,6 +3,8 @@
 
 These are my submissions to [frontendmentor.io](https://frontedmentor.io) challenges.
 
+Deploy for this project's Github Pages is currently facing a deploy issue. Will deploy to a different service if not resolved soon.
+
 [:arrow_right: View on Github Pages :link:](https://vaibhavbshete.github.io/frontend-mentor-challenges)
 
 Instead of creating a new repository for each challenge, I have created one repo with directories for each challenge.

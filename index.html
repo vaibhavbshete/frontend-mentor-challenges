@@ -104,6 +104,28 @@
             background-color: rgb(35, 39, 43);
             box-shadow: 0.5px 0.3px 10px rgba(30, 40, 47, 0.75);
         }
+        p.error{
+            background-color: rgb(244, 180, 192);
+            border: 1px solid rgb(104, 32, 46);
+            color: rgb(104, 32, 46);
+            padding:0.5rem;
+            border-radius:0.3rem
+        }
+        p.error::before{
+            content: '!';
+            background-color: rgb(104, 32, 46);
+            color:rgb(244, 180, 192);
+            /* padding-inline: 0.5rem; */
+            text-align: center;
+            display: inline-block;
+            width: 1.2rem;
+            height: 1.2rem;
+            line-height: 1.2rem;
+            border-radius: 1.2rem;
+            font-size: small;
+            
+            margin-inline-end: 0.2rem;
+        }
     </style>
 </head>
 <body>
@@ -112,6 +134,7 @@
             <small>my submissions to</small><br>
             <span class="font-bold">Frontend Mentor</span>
         </h1>
+        <p class="error">Currently facing issuses. Hope to resolve or deploy to a different service soon.</p>
         <p>Here you will find my submissions to the frontend mentor challegnes I took.</p>
         <p>Take a look:</p>
         <ul>
