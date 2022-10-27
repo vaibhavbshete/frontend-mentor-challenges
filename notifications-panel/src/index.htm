@@ -24,30 +24,30 @@
       
       <a class="title-action-link" href="#" @click.prevent="markAllAsRead">Mark all as read</a>
     </section>
-    <div class="notifications">
-
-
-      <div v-for="notification in notifications" class="notification" :class="!notification.read?'unread':''" @click="notification.read=!notification.read">
-        <div>
-            <img class="profile" :src="notification.senderImg" :alt="notification.sender">
-        </div>  
-        <div class="main">
-            
-        
-            <div>
-              <div class="notification-text"><span class="sender">{{notification.sender}}</span> {{notification.text}} <span class="subject" :class="notification.subjectType=='group'?'group':'post'">{{notification.subject}}</span></div>
-              <div class="time">{{notification.time}}</div>
-            </div>
-          
-          <div class="text-preview" v-if="notification.preview && notification.previewType=='text'">{{notification.preview}}</div>
+    <div class="notifications-scrollbox">
+      <div class="notifications">
+        <div v-for="notification in notifications" class="notification" :class="!notification.read?'unread':''" @click="notification.read=!notification.read">
+          <div>
+              <img class="profile" :src="notification.senderImg" :alt="notification.sender">
+          </div>
+          <div class="main">
+      
+      
+              <div>
+                <div class="notification-text"><span class="sender">{{notification.sender}}</span> {{notification.text}} <span class="subject" :class="notification.subjectType=='group'?'group':'post'">{{notification.subject}}</span></div>
+                <div class="time">{{notification.time}}</div>
+              </div>
+      
+            <div class="text-preview" v-if="notification.preview && notification.previewType=='text'">{{notification.preview}}</div>
+          </div>
+          <img class="image-preview" v-if="notification.previewType=='image'" :src="notification.preview" :alt="(notification.sender + ' ' + notification.text).substr(0,10) +  '... thumb'">
+      </div>
+      
+      
+      
+      
         </div>
-        <img class="image-preview" v-if="notification.previewType=='image'" :src="notification.preview" :alt="(notification.sender + ' ' + notification.text).substr(0,10) +  '... thumb'">
     </div>
-      
-      
-    
-    
-  </div>
   </main>
   
   <footer class="attribution">

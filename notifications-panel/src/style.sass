@@ -29,7 +29,8 @@ body
     font-weight: 500
     background-color: $very-light-grayish-blue
     position: relative
-    // max-height: 100vh
+    height: 100vh
+    max-height: 100vh
 @media screen and (min-width:$break-point)
     body
         padding-block: 3.7rem
@@ -45,13 +46,15 @@ a
     text-decoration: none
 .main-wrapper
     box-shadow: 0 0 2.5rem $light-grayish-blue-1
-    border-radius:0
     background-color: $white
     max-width:63ch
     margin-inline: auto
-    overflow-block: auto
+    // overflow-block: auto
     padding-inline: 1.875rem
-
+    padding-block-end: 0.5rem
+    max-height: 100%
+    display: flex
+    flex-direction: column
 @media screen and (min-width:$break-point)
     .main-wrapper
         border-radius:0.8em
@@ -61,26 +64,34 @@ a
     padding-block-end: 2.3rem
     display: flex
     justify-content: space-between
-
-.count-badge
-    background-color: $blue
-    border-radius: 0.375rem
-    color: $white
-    vertical-align: bottom
-    display: inline-block
-    font-size: 1rem
-    margin-inline: 0.7rem
-    padding-inline: 0.7rem
-    // padding-block-start: 0rem
-    line-height: 1rem
-    padding-block: 0.25rem
-.title-action-link
-    font-size: 1rem
-    color: $dark-grayish-blue
-    &:hover
-        color: $blue
-.notifications > * + *
-    margin-block-start: 0.625rem 
+    // flex-shrink: 0
+    .count-badge
+        background-color: $blue
+        border-radius: 0.375rem
+        color: $white
+        vertical-align: bottom
+        display: inline-block
+        font-size: 1rem
+        margin-inline: 0.7rem
+        padding-inline: 0.7rem
+        // padding-block-start: 0rem
+        line-height: 1rem
+        padding-block: 0.25rem
+    .title-action-link
+        font-size: 1rem
+        color: $dark-grayish-blue
+        &:hover
+            color: $blue
+.notifications-scrollbox
+    overflow-block: auto
+    height: 100%
+    // flex-shrink: 1
+    // padding-block-end: 0.5rem
+.notifications
+    overflow-block: auto
+    height: auto
+    &> * + *
+        margin-block-start: 0.625rem 
 .notification
     display: flex
     font-size: 1rem
