@@ -6,7 +6,7 @@ These are my submissions to [frontendmentor.io](https://frontedmentor.io) challe
 
 [:arrow_right: View on Github Pages :link:](https://vaibhavbshete.github.io/frontend-mentor-challenges)
 
-![gh]("/../../../../primer/octicons/blob/main/icons/mark-github-16.svg")
+![gh]("../../../primer/octicons/blob/main/icons/mark-github-16.svg")
 
 Instead of creating a new repository for each challenge, I have created one repo with directories for each challenge.
 
