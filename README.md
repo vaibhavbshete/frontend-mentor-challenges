@@ -6,7 +6,6 @@ These are my submissions to [frontendmentor.io](https://frontedmentor.io) challe
 
 [:arrow_right: View on Github Pages :link:](https://vaibhavbshete.github.io/frontend-mentor-challenges)
 
-![ecat]("../../../github/docs/blob/main/assets/images/electrocat.png")
 
 Instead of creating a new repository for each challenge, I have created one repo with directories for each challenge.
 
