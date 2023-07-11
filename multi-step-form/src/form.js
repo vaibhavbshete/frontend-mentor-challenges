@@ -10,7 +10,7 @@ import { FormPage } from './FormPage.jsx';
 
 
 function MultiStepForm() {
-    const [currentPage, setCurrentPage] = useState(4);
+    const [currentPage, setCurrentPage] = useState(1);
     const [successfulSubmit, setSuccessfulSubmit] = useState(false);
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', isYearly: true, plan: 'advanced', addons: ['online-service','larger-storage'] });
     const plans = [
