@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
+    "production-build":"webpack --mode production",
     "hmr serve": "webpack-dev-server"
   },
   "keywords": [],
