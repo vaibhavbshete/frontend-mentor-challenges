@@ -14,9 +14,9 @@ function MultiStepForm() {
     const [successfulSubmit, setSuccessfulSubmit] = useState(false);
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', isYearly: true, plan: 'advanced', addons: ['online-service','larger-storage'] });
     const plans = [
-        { name: 'Arcade', value: 'arcade', monthlyRate: 9, yearlyRate: 90, yearlyExtra: '2 months free',iconUrl:"/assets/images/icon-arcade.svg" },
-        { name: 'Advanced', value: 'advanced', monthlyRate: 12, yearlyRate: 120, yearlyExtra: '2 months free',iconUrl:"/assets/images/icon-advanced.svg"  },
-        { name: 'Pro', value: 'pro', monthlyRate: 15, yearlyRate: 150, yearlyExtra: '2 months free',iconUrl:"/assets/images/icon-pro.svg"  },
+        { name: 'Arcade', value: 'arcade', monthlyRate: 9, yearlyRate: 90, yearlyExtra: '2 months free',iconUrl:"assets/images/icon-arcade.svg" },
+        { name: 'Advanced', value: 'advanced', monthlyRate: 12, yearlyRate: 120, yearlyExtra: '2 months free',iconUrl:"assets/images/icon-advanced.svg"  },
+        { name: 'Pro', value: 'pro', monthlyRate: 15, yearlyRate: 150, yearlyExtra: '2 months free',iconUrl:"assets/images/icon-pro.svg"  },
     ];
     const addOns = [
         {name:'Online Service',value:'online-service',description:'Access to multiplayer games',monthlyRate:1,yearlyRate:10},
@@ -42,7 +42,7 @@ function MultiStepForm() {
                         (successfulSubmit)? 
                             
                     (<div className="step-panel final success-panel">
-                        <img className='icon' src='/assets/images/icon-thank-you.svg' alt='thank you icon' />
+                        <img className='icon' src='assets/images/icon-thank-you.svg' alt='thank you icon' />
                         <h2 className='legend'>Thank you!</h2>
                             
                         <p className="desc">
