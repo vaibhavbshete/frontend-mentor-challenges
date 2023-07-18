@@ -13,6 +13,7 @@ function MultiStepForm() {
     const [currentPage, setCurrentPage] = useState(1);
     const [successfulSubmit, setSuccessfulSubmit] = useState(false);
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', isYearly: true, plan: 'advanced', addons: [] });
+    const [formErrors,setFormErrors] = useState({});
     const plans = [
         { name: 'Arcade', value: 'arcade', monthlyRate: 9, yearlyRate: 90, yearlyExtra: '2 months free',iconUrl:"assets/images/icon-arcade.svg" },
         { name: 'Advanced', value: 'advanced', monthlyRate: 12, yearlyRate: 120, yearlyExtra: '2 months free',iconUrl:"assets/images/icon-advanced.svg"  },
@@ -23,15 +24,35 @@ function MultiStepForm() {
         {name:'Larger Storage',value:'larger-storage',description:'Extra 1TB of cloud save',monthlyRate:2,yearlyRate:20},
         {name:'Customizable Profile',value:'custom-profile',description:'Custom theme on your profile',monthlyRate:1,yearlyRate:20},
     ]
+    function validateAndGoFurther() {
+        if (currentPage == 1) {
+            let newFormErrors = {};
+            if (!formData.name) {
+                newFormErrors.name = 'Please enter your name';
+            }
+            if (!formData.email) {
+                newFormErrors.email = 'Please enter your email';
+            }
+            if (!formData.phone) {
+                newFormErrors.phone = 'Please enter your phone number';
+            }
+           
+            if (Object.keys(newFormErrors).length) {
+                setFormErrors(newFormErrors);
+                return false;
+            }
+        }
+        setCurrentPage(currentPage + 1)
+    }
     return (<>
             <form class="form-with-sidebar" action="#" method="POST" >
                 
             
                 <div className="sidebar">
-                        <PageButton pNumber={1} text="Your Info" currentPage={currentPage } pageSetter={(pN) => { setCurrentPage(pN) }}/>
-                        <PageButton pNumber={2} text="Select plan" currentPage={currentPage} pageSetter={(pN) => { setCurrentPage(pN) }}/>
-                        <PageButton pNumber={3} text="Add-ons" currentPage={currentPage} pageSetter={(pN) => { setCurrentPage(pN) }}/>
-                        <PageButton pNumber={4} text="Summary" currentPage={currentPage} pageSetter={(pN) => { setCurrentPage(pN) }}/>
+                        <PageButton pNumber={1} disabled={!successfulSubmit} text="Your Info" currentPage={currentPage } pageSetter={(pN) => { setCurrentPage(pN) }}/>
+                        <PageButton pNumber={2} disabled={!successfulSubmit} text="Select plan" currentPage={currentPage} pageSetter={(pN) => { setCurrentPage(pN) }}/>
+                        <PageButton pNumber={3} disabled={!successfulSubmit} text="Add-ons" currentPage={currentPage} pageSetter={(pN) => { setCurrentPage(pN) }}/>
+                        <PageButton pNumber={4} disabled={!successfulSubmit} text="Summary" currentPage={currentPage} pageSetter={(pN) => { setCurrentPage(pN) }}/>
                     
                 </div>
                 <div class="form-main">
@@ -55,11 +76,11 @@ function MultiStepForm() {
                 
                     </div>)
                         
-                        : <FormPage pageNo={currentPage} pageTurner={setCurrentPage} formData={formData} plans={plans} addOns={addOns} setFormData={(data) => setFormData(data)} />
+                                : <FormPage pageNo={currentPage} pageTurner={setCurrentPage} formData={formData} plans={plans} addOns={addOns} setFormData={(data) => setFormData(data)} formErrors={formErrors } />
                     }
                            
                     
-                <LowerNavButtons currentPage={currentPage} setCurrentPage={(x) => setCurrentPage(x)} successfulSubmit={successfulSubmit} setSuccessfulSubmit={ setSuccessfulSubmit} />
+                <LowerNavButtons currentPage={currentPage} setCurrentPage={(x) => setCurrentPage(x)} validateAndGoFurther={validateAndGoFurther} successfulSubmit={successfulSubmit} setSuccessfulSubmit={ setSuccessfulSubmit} />
                         </div>
         
                     </div>

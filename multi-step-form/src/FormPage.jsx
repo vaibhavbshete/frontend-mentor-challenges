@@ -1,31 +1,40 @@
-export function FormPage({ pageNo, pageTurner, formData, setFormData, plans, addOns }) {
+export function FormPage({ pageNo, pageTurner, formData, setFormData, plans, addOns, formErrors }) {
     
     let retHtml = ''
     switch (pageNo) {
         case 1:
             retHtml= (
-            <fieldset className="step-panel" >
-                <h2 className='legend'>Personal info</h2>
-                <div className="desc">
-                    Please provide your name, email address, and phone number.
-                </div>
-            
-                <div className="input-group">
-                    <label for="name-input">Name</label>
-                    <input type="text" name="name" id="name-input" placeholder="e.g. Stephen King" />
-                </div>
-                <div className="input-group">
-                    <label for="email-input">Email Address</label>
-                    <input type="email" name="email" id="email-input" placeholder="e.g. stephenking@lorem.com" />
-                </div>
-                <div className="input-group">
-                    <label for="phone-no-input">Phone Number</label>
-                    <input type="tel" name="phone-no" id="phone-no-input" placeholder="e.g. +1 234 567 890" />
-                </div>
-                {/* <LowerNavButtons currentPage={pageNo} setCurrentPage={(x)=>pageTurner(x)}/> */}
-                    
-            </fieldset>
-          )
+                <fieldset className="step-panel" >
+                    <h2 className='legend'>Personal info</h2>
+                    <div className="desc">
+                        Please provide your name, email address, and phone number.
+                    </div>
+                
+                    <div className="input-group">
+                        <div className="label-wrap">
+                            <label htmlFor="name-input">Name</label>
+                            {formErrors.name && <small class="form-error-text">{formErrors.name}</small>}
+                        </div>
+                        <input className={formErrors.name ? 'is-invalid' : '' } type="text" name="name" id="name-input" onChange={(event)=>setFormData(Object.assign(formData, { name: event.target.value })) } placeholder="e.g. Stephen King" />
+                    </div>
+                    <div className="input-group">
+                        <div className="label-wrap">
+                            <label htmlFor="email-input">Email Address</label>
+                            {formErrors.email && <small class="form-error-text">{formErrors.email}</small>}
+                        </div>
+                        <input className={formErrors.email ? 'is-invalid' : '' } type="email" name="email" id="email-input" onChange={(event)=>setFormData(Object.assign(formData, { email: event.target.value }))} placeholder="e.g. stephenking@lorem.com" />
+                    </div>
+                    <div className="input-group">
+                        <div className="label-wrap">
+                            <label htmlFor="phone-no-input">Phone Number</label>
+                            {formErrors.phone && <small class="form-error-text">{formErrors.phone}</small>}
+                        </div>
+                        <input className={formErrors.phone ? 'is-invalid' : '' } type="tel" name="phone-no" id="phone-no-input" onChange={(event)=>setFormData(Object.assign(formData, { phone: event.target.value }))} placeholder="e.g. +1 234 567 890" />
+                    </div>
+                    {/* <LowerNavButtons currentPage={pageNo} setCurrentPage={(x)=>pageTurner(x)}/> */}
+                        
+                </fieldset>
+            )
             break;
         case 2:
             retHtml= (
