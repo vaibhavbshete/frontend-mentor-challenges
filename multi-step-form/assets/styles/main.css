@@ -12,8 +12,6 @@
    ========================================================================== */
 :root{
     /* Colors */
-    --test: hsl(215, 100%, 97%);
-    --sdsd:hsl(210, 42%, 93%);
     /* Primary */
     --marine-blue: hsl(213, 96%, 18%);
     --marine-blue-light: hsla(213, 96%, 18%, 0.882);
@@ -203,7 +201,7 @@ body{
   background-color: var(--pastel-blue);
   border-color: var(--pastel-blue);
   color: var(--marine-blue);
-  font-weight: bold;
+  font-weight: 700;
 }
 .sidebar-button-flex .step-info-wrap {
   text-align: start;
@@ -216,7 +214,7 @@ body{
 .sidebar-button-flex .step-count-text{
   font-size: small;
   color: var(--pastel-blue);
-  font-weight: lighter;
+  font-weight: 400;
 }
 .sidebar-button-flex .step-info{
   letter-spacing: 0.02rem;
@@ -443,7 +441,7 @@ right: calc(3rem + 0.75rem);
 input:checked+.plan-box .chk-bg{
   border-color: var(--purplish-blue);
   background-color: var(--purplish-blue);
-  background-image: url('assets/images/icon-checkmark.svg');
+  background-image: url('../images/icon-checkmark.svg');
   background-repeat: no-repeat;
   background-position: center
 }
@@ -601,12 +599,7 @@ input:checked+.plan-box .chk-bg{
   .sidebar-button-flex  .step-info-wrap{
     display: block;
   }
-  .sidebar-button-flex .step-count-text{
-    /* display: block; */
-  }
-  .sidebar-button-flex .step-info{
-    /* display: block; */
-  }
+
   .form-main{
     width: calc(100% - 16rem);
     /* padding: 0; */
