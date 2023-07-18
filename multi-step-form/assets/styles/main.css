@@ -308,6 +308,16 @@ body{
   font-size: small;
   padding: 0.25rem 0;
 }
+.input-group .label-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.form-error-text{
+  color: var(--strawberry-red);
+  font-weight: 500;
+}
 
 .input-group input[type="text"],
 .input-group input[type="tel"],
@@ -325,7 +335,7 @@ body{
   outline: 1px var(--purplish-blue);
   border-color: var(--purplish-blue);
 }
-.input-group input:invalid{
+.input-group input:invalid, .input-group input.is-invalid{
   /* outline: 1px  var(--marine-blue); */
   border-color: var(--strawberry-red);
 }
