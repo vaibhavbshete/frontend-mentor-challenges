@@ -12,7 +12,7 @@ import { FormPage } from './FormPage.jsx';
 function MultiStepForm() {
     const [currentPage, setCurrentPage] = useState(1);
     const [successfulSubmit, setSuccessfulSubmit] = useState(false);
-    const [formData, setFormData] = useState({ name: '', email: '', phone: '', isYearly: true, plan: 'advanced', addons: ['online-service','larger-storage'] });
+    const [formData, setFormData] = useState({ name: '', email: '', phone: '', isYearly: true, plan: 'advanced', addons: [] });
     const plans = [
         { name: 'Arcade', value: 'arcade', monthlyRate: 9, yearlyRate: 90, yearlyExtra: '2 months free',iconUrl:"assets/images/icon-arcade.svg" },
         { name: 'Advanced', value: 'advanced', monthlyRate: 12, yearlyRate: 120, yearlyExtra: '2 months free',iconUrl:"assets/images/icon-advanced.svg"  },
