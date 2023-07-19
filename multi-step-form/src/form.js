@@ -30,15 +30,24 @@ function MultiStepForm() {
             if (!formData.name) {
                 newFormErrors.name = 'Please enter your name';
             }
+            else {
+                delete newFormErrors.name
+            }
             if (!formData.email) {
                 newFormErrors.email = 'Please enter your email';
+            }
+            else {
+                delete newFormErrors.email
             }
             if (!formData.phone) {
                 newFormErrors.phone = 'Please enter your phone number';
             }
+            else {
+                delete newFormErrors.phone
+            }
            
+            setFormErrors(newFormErrors);
             if (Object.keys(newFormErrors).length) {
-                setFormErrors(newFormErrors);
                 return false;
             }
         }
