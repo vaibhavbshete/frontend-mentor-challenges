@@ -13,23 +13,23 @@ export function FormPage({ pageNo, pageTurner, formData, setFormData, plans, add
                     <div className="input-group">
                         <div className="label-wrap">
                             <label htmlFor="name-input">Name</label>
-                            {formErrors.name && <small class="form-error-text">{formErrors.name}</small>}
+                            {formErrors.name && <small className="form-error-text">{formErrors.name}</small>}
                         </div>
-                        <input className={formErrors.name ? 'is-invalid' : '' } type="text" name="name" id="name-input" onChange={(event)=>setFormData(Object.assign(formData, { name: event.target.value })) } placeholder="e.g. Stephen King" />
+                        <input className={formErrors.name ? 'is-invalid' : ''} type="text" name="name" id="name-input" value={formData.name} onChange={(event) => setFormData( Object.assign(  Object.assign({},formData), { name: event.target.value })) } placeholder="e.g. Stephen King" />
                     </div>
                     <div className="input-group">
                         <div className="label-wrap">
                             <label htmlFor="email-input">Email Address</label>
-                            {formErrors.email && <small class="form-error-text">{formErrors.email}</small>}
+                            {formErrors.email && <small className="form-error-text">{formErrors.email}</small>}
                         </div>
-                        <input className={formErrors.email ? 'is-invalid' : '' } type="email" name="email" id="email-input" onChange={(event)=>setFormData(Object.assign(formData, { email: event.target.value }))} placeholder="e.g. stephenking@lorem.com" />
+                        <input className={formErrors.email ? 'is-invalid' : '' } type="email" name="email" id="email-input" value={formData.email} onChange={(event)=>setFormData(Object.assign(Object.assign({},formData), { email: event.target.value }))} placeholder="e.g. stephenking@lorem.com" />
                     </div>
                     <div className="input-group">
                         <div className="label-wrap">
                             <label htmlFor="phone-no-input">Phone Number</label>
-                            {formErrors.phone && <small class="form-error-text">{formErrors.phone}</small>}
+                            {formErrors.phone && <small className="form-error-text">{formErrors.phone}</small>}
                         </div>
-                        <input className={formErrors.phone ? 'is-invalid' : '' } type="tel" name="phone-no" id="phone-no-input" onChange={(event)=>setFormData(Object.assign(formData, { phone: event.target.value }))} placeholder="e.g. +1 234 567 890" />
+                        <input className={formErrors.phone ? 'is-invalid' : '' } type="tel" name="phone" id="phone-no-input" value={formData.phone} onChange={(event)=>setFormData(Object.assign(Object.assign({},formData), { phone: event.target.value }))} placeholder="e.g. +1 234 567 890" />
                     </div>
                     {/* <LowerNavButtons currentPage={pageNo} setCurrentPage={(x)=>pageTurner(x)}/> */}
                         

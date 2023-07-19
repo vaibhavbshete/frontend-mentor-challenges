@@ -44,10 +44,7 @@ function MultiStepForm() {
         }
         setCurrentPage(currentPage + 1)
     }
-    return (<>
-            <form class="form-with-sidebar" action="#" method="POST" >
-                
-            
+    return  (<form className="form-with-sidebar" action="#" method="POST" >
                 <div className="sidebar">
                         <PageButton pNumber={1} disabled={!successfulSubmit} text="Your Info" currentPage={currentPage } pageSetter={(pN) => { setCurrentPage(pN) }}/>
                         <PageButton pNumber={2} disabled={!successfulSubmit} text="Select plan" currentPage={currentPage} pageSetter={(pN) => { setCurrentPage(pN) }}/>
@@ -55,39 +52,39 @@ function MultiStepForm() {
                         <PageButton pNumber={4} disabled={!successfulSubmit} text="Summary" currentPage={currentPage} pageSetter={(pN) => { setCurrentPage(pN) }}/>
                     
                 </div>
-                <div class="form-main">
-                    <div class="form-relative-wrap">
+                <div className="form-main">
+                    <div className="form-relative-wrap">
         
-                <div className="steps">
-                    {
-                        (successfulSubmit)? 
+                        <div className="steps">
+                            {
+                                (successfulSubmit) ? 
+                                    
+                                (<div className="step-panel final success-panel">
+                                    <img className='icon' src='assets/images/icon-thank-you.svg' alt='thank you icon' />
+                                    <h2 className='legend'>Thank you!</h2>
+                                    
+                                    <p className="desc">
+                                        Thanks for confirming your subscription! We hope you have fun
+                                        using our platform. If you ever need support, please feel free
+                                        to email us at support@loremgaming.com.
+                                    </p>
                             
-                    (<div className="step-panel final success-panel">
-                        <img className='icon' src='assets/images/icon-thank-you.svg' alt='thank you icon' />
-                        <h2 className='legend'>Thank you!</h2>
                             
-                        <p className="desc">
-                            Thanks for confirming your subscription! We hope you have fun
-                            using our platform. If you ever need support, please feel free
-                            to email us at support@loremgaming.com.
-                        </p>
-                
-                
-                
-                    </div>)
-                        
+                            
+                                </div>)
+                                
                                 : <FormPage pageNo={currentPage} pageTurner={setCurrentPage} formData={formData} plans={plans} addOns={addOns} setFormData={(data) => setFormData(data)} formErrors={formErrors } />
-                    }
-                           
-                    
-                <LowerNavButtons currentPage={currentPage} setCurrentPage={(x) => setCurrentPage(x)} validateAndGoFurther={validateAndGoFurther} successfulSubmit={successfulSubmit} setSuccessfulSubmit={ setSuccessfulSubmit} />
+                            }
+                                
+                            
+                        <LowerNavButtons currentPage={currentPage} setCurrentPage={(x) => setCurrentPage(x)} validateAndGoFurther={validateAndGoFurther} successfulSubmit={successfulSubmit} setSuccessfulSubmit={ setSuccessfulSubmit} />
                         </div>
         
                     </div>
                 </div>
-            </form>
-        </>
-    )
+            </form>)
+
+    
 }
 const root = createRoot(document.getElementById('app'));
 root.render(<MultiStepForm />);
